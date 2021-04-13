@@ -16,37 +16,30 @@
 
 body {
   background-image: url("https://user-images.githubusercontent.com/33235211/114550703-74e69880-9c9d-11eb-8677-cbdf866572c1.gif");
+  background-size: 400px 200px;
+  background-color: black;
   color: white;
   font-family: "BMHANNAAir";
 }
 
 #top-wrap {
-  display: flex;
-  flex-direction: row;
-  font-size: 25px;
+  width: 90%;
+  font-size: 1.563rem;
+  margin: 0 auto;
 }
 
-#profile-wrap {
-  margin-left: 150px;
-  margin-top: 20px;
-}
-
-#bgm-wrap {
-  margin-left: 730px;
-  margin-top: 27px;
-}
-
-#top-span {
-  padding-left: 10px;
+#top-table {
+  width: 100%;
+  margin-top: 1.25rem;
 }
 
 #main-wrap {
   width: 60%;
   margin: 0 auto;
-  margin-top: 110px;
+  margin-top: 6.875rem;
   border: 2px solid white;
   border-radius: 30px;
-  font-size: 18px;
+  font-size: 1.25rem;
 }
 
 h1,
@@ -72,53 +65,73 @@ a:hover {
 }
 
 ul > a {
-  font-size: 25px;
+  font-size: 1.563rem;
 }
 
-ul {
-  font-size: 20px;
-}
 li {
-  margin-bottom: 15px;
+  margin-bottom: 0.938rem;
 }
 
 h1 {
   margin-top: 0;
-  line-height: 100px;
-  font-size: 60px;
+  line-height: 6.25rem;
+  font-size: 3.75rem;
   border-bottom: 2px solid white;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 25px;
+  font-size: 2.063rem;
+}
+
+h4 {
+  font-size: 1.563rem;
 }
 
 .layout {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 3.125rem;
+  margin-right: 3.125rem;
 }
 
 table {
-  font-size: 20px;
+  font-size: 1.25rem;
   border-collapse: collapse;
 }
 
 th {
-  font-size: 23px;
+  font-size: 1.438rem;
 }
 
 strong {
   color: red;
 }
 
-.big-table {
+p {
+  line-height: 1.2;
+}
+
+.subject-table {
   width: 90%;
+}
+
+.image-table {
+  width: 100%;
+}
+
+.image-table td img {
+  max-width: 100%;
+  object-fit: fill;
 }
 
 .margin-auto {
   margin: 0 auto;
+}
+
+@media (min-width: 450px) and (max-width: 480px) {
+  body {
+    background-size: cover;
+  }
 }
