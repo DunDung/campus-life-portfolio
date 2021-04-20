@@ -145,10 +145,6 @@ p {
   border-radius: 100px;
 }
 
-audio {
-  display: none;
-}
-
 @media (min-width: 450px) and (max-width: 480px) {
   body {
     background-size: cover;
