@@ -20,8 +20,41 @@ body {
   font-family: "BMHANNAAir";
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+aside > ul {
+  position: fixed;
+  top: 20%;
+  left: 81%;
+  right: 0;
+}
+
+aside > ul > a {
+  font-size: 1.3rem;
+  color: darkgray;
+}
+
+#top-move-button {
+  position: fixed;
+  width: 55px;
+  top: 90%;
+  left: 82.5%;
+  right: 0;
+}
+
+#top-move-button:hover {
+  cursor: pointer;
+  background-color: gray;
+  border-radius: 100px;
+}
+
 #top-wrap {
-  width: 90%;
+  width: 95%;
   font-size: 1.563rem;
   margin: 0 auto;
 }
