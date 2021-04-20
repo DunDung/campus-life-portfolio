@@ -128,6 +128,32 @@ p {
   margin: 0 auto;
 }
 
+#bgm-play-button,
+#bgm-stop-button {
+  width: 30px;
+}
+
+#bgm-play-button {
+  margin: 3px 0 0 4px;
+}
+
+#bgm-stop-button {
+  margin-left: 3px;
+  display: none;
+}
+
+#bgm-play-button:hover,
+#bgm-stop-button:hover {
+  cursor: pointer;
+  background-color: red;
+  width: 31px;
+  border-radius: 100px;
+}
+
+audio {
+  display: none;
+}
+
 @media (min-width: 450px) and (max-width: 480px) {
   body {
     background-size: cover;
