@@ -131,14 +131,10 @@ p {
 #bgm-play-button,
 #bgm-stop-button {
   width: 30px;
-}
-
-#bgm-play-button {
-  margin: 3px 0 0 4px;
+  margin-left: 3px;
 }
 
 #bgm-stop-button {
-  margin-left: 3px;
   display: none;
 }
 
