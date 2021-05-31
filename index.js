@@ -4,13 +4,13 @@ bgm.loop = true;
 const $bgmPlayButton = document.getElementById("bgm-play-button");
 const $bgmStopButton = document.getElementById("bgm-stop-button");
 
-$bgmPlayButton.addEventListener("click",  () => {
+$bgmPlayButton.addEventListener("click", () => {
   bgm.play();
   $bgmPlayButton.style.display = "none";
   $bgmStopButton.style.display = "block";
 });
 
-$bgmStopButton.addEventListener("click",  () => {
+$bgmStopButton.addEventListener("click", () => {
   bgm.pause();
   $bgmStopButton.style.display = "none";
   $bgmPlayButton.style.display = "block";
@@ -25,7 +25,6 @@ let $disLikeTable = document.getElementById("dis-like-table");
 let $disLikeImage = $disLikeTable.getElementsByTagName("img")[0];
 let $disLikeCount = $disLikeTable.getElementsByTagName("h5")[0];
 
-
 initCount(likeKey, $likeCount);
 initCount(disLikeKey, $disLikeCount);
 addEventIncreaseCount(likeKey, $likeImage, $likeCount);
@@ -34,7 +33,7 @@ addEventIncreaseCount(disLikeKey, $disLikeImage, $disLikeCount);
 function initCount(localStorageKey, $count) {
   let item = localStorage.getItem(localStorageKey);
   if (!item) {
-    $count.innerText = "7"
+    $count.innerText = "7";
     localStorage.setItem(localStorageKey, "7");
   } else {
     $count.innerText = item;
