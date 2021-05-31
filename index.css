@@ -18,6 +18,7 @@ body {
   background-image: url("https://user-images.githubusercontent.com/33235211/114694566-a327af00-9d55-11eb-8f6f-83c5f94b3793.gif");
   color: white;
   font-family: "BMHANNAAir";
+  margin-bottom: 45px;
 }
 
 header {
@@ -46,7 +47,6 @@ aside > div {
   left: 7%;
   right: 0;
 }
-
 
 aside > div > hr {
   background-color: white;
@@ -214,6 +214,39 @@ p {
   background-color: red;
   width: 31px;
   border-radius: 100px;
+}
+
+textarea,
+input {
+  background-color: white;
+  border: 2px solid gray;
+  font-size: 1.1rem;
+  width: 100%;
+  font-family: "BMHANNAAir";
+  font-weight: bold;
+  vertical-align: middle;
+}
+input {
+  width: 20%;
+}
+button {
+  background-color: unset;
+  border: 1px solid gray;
+  font-family: "BMHANNAAir";
+  color: white;
+  border-radius: 10%;
+  height: 27px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  outline: 0;
+}
+
+button:hover {
+  background-color: red;
+}
+
+#comment-list {
+  text-align: left;
 }
 
 @media (min-width: 450px) and (max-width: 480px) {

@@ -47,3 +47,63 @@ function addEventIncreaseCount(localStorageKey, $image, $count) {
     localStorage.setItem(localStorageKey, increasedCount);
   });
 }
+const auth = "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";
+loadComments(auth);
+registerComment(auth);
+
+function loadComments(auth) {
+  fetch("https://api.github.com/repos/dundung/campus-life-portfolio/issues", {
+    method: "GET",
+    headers: {
+      Authorization: "token " + auth,
+    },
+  })
+    .then((res) => res.json())
+    .then((comments) => {
+      let $commentList = document.getElementById("comment-list");
+      for (let i in comments) {
+        $commentList.innerHTML += `
+        <li>
+          <p>${comments[i].title}  
+            <small>${comments[i].created_at
+          .replace("T", "  ")
+          .replace("Z", "")
+          .slice(0, -3)}</small>
+          </p>
+          <p>${comments[i].body}</p>
+        </li>`;
+      }
+    });
+}
+
+function registerComment(auth) {
+  let $commentRegistration = document.getElementById("comment-registration");
+  $commentRegistration.addEventListener("click", () => {
+    let $nickname = document.getElementById("nickname");
+    let $commentInput = document.getElementById("comment_input");
+    if (!$nickname.value) {
+      alert("닉네임을 입력해주세요!");
+    } else if (!$commentInput.value) {
+      alert("내용을 입력해주세요!");
+    } else {
+      fetch(
+        "https://api.github.com/repos/dundung/campus-life-portfolio/issues",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "token " + auth,
+          },
+          body: JSON.stringify({
+            title: $nickname.value,
+            body: $commentInput.value,
+          }),
+        }
+      ).then(() => {
+        $nickname.value = "";
+        $commentInput.value = "";
+        window.location.reload();
+      });
+    }
+  });
+}
