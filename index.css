@@ -39,6 +39,36 @@ aside > ul > a {
   color: darkgray;
 }
 
+aside > div {
+  width: 130px;
+  position: fixed;
+  top: 45%;
+  left: 5%;
+  right: 0;
+}
+
+
+aside > div > hr {
+  background-color: white;
+}
+
+.like {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.like:hover {
+  width: 80px;
+  height: 80px;
+}
+
+.like-count {
+  text-align: right;
+  width: 30%;
+  color: white;
+}
+
 #top-move-button {
   position: fixed;
   width: 55px;
