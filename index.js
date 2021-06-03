@@ -51,8 +51,8 @@ const auth1 = "ghp_JuGYom";
 const auth2 = "VjDELWSPHOB8";
 const auth3 = "WnuF4uhp2";
 const auth4 = "gc52NqBlZ";
-loadComments(auth1+auth2+auth3+auth4);
-registerComment(auth1+auth2+auth3+auth4);
+loadComments(auth1 + auth2 + auth3 + auth4);
+registerComment(auth1 + auth2 + auth3 + auth4);
 
 function loadComments(auth) {
   fetch("https://api.github.com/repos/dundung/campus-life-portfolio/issues", {
@@ -69,9 +69,9 @@ function loadComments(auth) {
         <li>
           <p>${comments[i].title}  
             <small>${comments[i].created_at
-          .replace("T", "  ")
-          .replace("Z", "")
-          .slice(0, -3)}</small>
+              .replace("T", "  ")
+              .replace("Z", "")
+              .slice(0, -3)}</small>
           </p>
           <p>${comments[i].body}</p>
         </li>`;
@@ -103,6 +103,7 @@ function registerComment(auth) {
           }),
         }
       ).then(() => {
+        sendMail($nickname.value, $commentInput.value)
         $nickname.value = "";
         $commentInput.value = "";
         window.location.reload();
@@ -110,3 +111,12 @@ function registerComment(auth) {
     }
   });
 }
+
+function sendMail(nickname, comment) {
+  let templateParams = {
+    nickname: nickname,
+    comment: comment
+  };
+  emailjs.send('service_2syktss', 'template_4nk0rnw', templateParams);
+}
+
