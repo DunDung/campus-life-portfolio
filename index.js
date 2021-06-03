@@ -103,10 +103,9 @@ function registerComment(auth) {
           }),
         }
       ).then(() => {
-        sendMail($nickname.value, $commentInput.value)
+        sendMail($nickname.value, $commentInput.value);
         $nickname.value = "";
         $commentInput.value = "";
-        window.location.reload();
       });
     }
   });
@@ -115,8 +114,9 @@ function registerComment(auth) {
 function sendMail(nickname, comment) {
   let templateParams = {
     nickname: nickname,
-    comment: comment
+    comment: comment,
   };
-  emailjs.send('service_2syktss', 'template_4nk0rnw', templateParams);
+  emailjs
+    .send("service_2syktss", "template_4nk0rnw", templateParams)
+    .then(() => window.location.reload());
 }
-
