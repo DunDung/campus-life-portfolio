@@ -40,7 +40,7 @@ aside > ul > a {
   color: darkgray;
 }
 
-aside > div {
+aside > .like-wrap {
   width: 130px;
   position: fixed;
   top: 45%;
@@ -48,9 +48,20 @@ aside > div {
   right: 0;
 }
 
-aside > div > hr {
+aside > .like-wrap > hr {
   background-color: white;
 }
+
+aside > .clock-wrap {
+  position: fixed;
+  top: 78%;
+  left: 82.6%;
+  right: 0;
+}
+aside > .clock-wrap > span {
+  font-size: 1.2rem;
+}
+
 
 .like {
   width: 70px;
@@ -74,7 +85,7 @@ aside > div > hr {
   position: fixed;
   width: 55px;
   top: 90%;
-  left: 82.5%;
+  left: 82%;
   right: 0;
 }
 
