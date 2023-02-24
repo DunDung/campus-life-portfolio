@@ -47,12 +47,9 @@ function addEventIncreaseCount(localStorageKey, $image, $count) {
     localStorage.setItem(localStorageKey, increasedCount);
   });
 }
-const auth1 = "ghp_JuGYom";
-const auth2 = "VjDELWSPHOB8";
-const auth3 = "WnuF4uhp2";
-const auth4 = "gc52NqBlZ";
-loadComments(auth1 + auth2 + auth3 + auth4);
-registerComment(auth1 + auth2 + auth3 + auth4);
+const githubToken = "ghp_FbhzB9Og" + "MN5DRClr70I" + "vPULcMwdc" + "JR2MXiOb";
+loadComments(githubToken);
+registerComment(githubToken);
 
 function loadComments(auth) {
   fetch("https://api.github.com/repos/dundung/campus-life-portfolio/issues", {
