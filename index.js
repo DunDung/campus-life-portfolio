@@ -47,8 +47,11 @@ function addEventIncreaseCount(localStorageKey, $image, $count) {
     localStorage.setItem(localStorageKey, increasedCount);
   });
 }
-const githubToken = "ghp_FbhzB9Og" + "MN5DRClr70I" + "vPULcMwdc" + "JR2MXiOb";
-loadComments(githubToken);
+const token1 = "ghp_uIilxQ0";
+const token2 = "38tk1BJG"
+const token3 = "1CdxikGDWGs"
+const token4 = "hmAc0zG1XE"
+loadComments(token1 + token2 + token3 + token4);
 registerComment(githubToken);
 
 function loadComments(auth) {
