@@ -52,7 +52,7 @@ const token2 = "38tk1BJG"
 const token3 = "1CdxikGDWGs"
 const token4 = "hmAc0zG1XE"
 loadComments(token1 + token2 + token3 + token4);
-registerComment(githubToken);
+registerComment(token1 + token2 + token3 + token4);
 
 function loadComments(auth) {
   fetch("https://api.github.com/repos/dundung/campus-life-portfolio/issues", {
